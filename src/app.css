@@ -1,0 +1,65 @@
+.app {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding: 40px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+@media (min-width: 968px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.trade-container {
+  max-width: 700px;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  gap: 30px;
+  min-height: 60vh;
+}
+
+.footer {
+  padding: 30px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  margin-top: auto;
+}
+
+.footer.light {
+  background: var(--light-bg-secondary);
+  border-top: 4px solid var(--light-border);
+  color: var(--light-text-primary);
+}
+
+.footer.dark {
+  background: var(--dark-bg-secondary);
+  border-top: 4px solid var(--dark-border);
+  color: var(--dark-text-primary);
+}
+
+.footer p {
+  font-size: 8px;
+  margin: 8px 0;
+}
+
+.footer p:first-child {
+  font-size: 10px;
+}

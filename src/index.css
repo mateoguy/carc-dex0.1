@@ -1,0 +1,141 @@
+/* ========================================================= */
+/*                    PIXI + CARC STYLE                      */
+/* ========================================================= */
+
+/* --- MUST BE FIRST --- */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* --- TAILWIND --- */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========================================================= */
+/*                     GLOBAL VARIABLES                      */
+/* ========================================================= */
+:root {
+  --pixel: 4px;
+
+  --carc-orange: #ff7a18;
+  --carc-orange-light: #ff9f4a;
+  --carc-orange-dark: #cc5f12;
+
+  --carc-glow: 0 0 12px rgba(255, 122, 24, 0.8);
+  --carc-glow-strong: 0 0 22px rgba(255, 122, 24, 1);
+
+  --bg-dark: #0f0f0f;
+  --bg-card: #111;
+  --bg-light: #f7f7f7;
+
+  --text-light: #ffffff;
+  --text-dark: #111;
+}
+
+/* ========================================================= */
+/*                       GLOBAL STYLE                        */
+/* ========================================================= */
+body {
+  font-family: 'Press Start 2P', cursive;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  image-rendering: pixelated;
+  margin: 0;
+  padding: 0;
+}
+
+.pixel-card {
+  background: var(--bg-card);
+  border: var(--pixel) solid var(--carc-orange);
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: var(--carc-glow);
+}
+
+.pixel-button {
+  background: #111;
+  border: var(--pixel) solid var(--carc-orange);
+  padding: 14px 22px;
+  color: var(--carc-orange-light);
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  transition: 0.2s ease;
+  box-shadow: var(--carc-glow);
+}
+
+.pixel-button:hover {
+  background: var(--carc-orange);
+  color: black;
+  box-shadow: var(--carc-glow-strong);
+  transform: translateY(-2px);
+}
+
+.pixel-input {
+  width: 100%;
+  padding: 12px;
+  border: var(--pixel) solid var(--carc-orange);
+  background: #111;
+  color: var(--carc-orange-light);
+  box-shadow: var(--carc-glow);
+  outline: none;
+}
+
+.pixel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: #111;
+  border-bottom: var(--pixel) solid var(--carc-orange-dark);
+}
+
+.pixel-footer {
+  text-align: center;
+  font-size: 10px;
+  padding: 20px 0;
+  border-top: var(--pixel) solid var(--carc-orange-dark);
+  background: #111;
+}
+
+/* ========================================================= */
+/*                   GRADIENT BACKGROUND                     */
+/* ========================================================= */
+@keyframes pxgradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animated-bg {
+  background: linear-gradient(135deg, #0a0a0a, #1b1b1b, #0d0d0d);
+  background-size: 300% 300%;
+  animation: pxgradient 12s ease infinite;
+  min-height: 100vh;
+}
+
+/* ========================================================= */
+/*               NAV BOTTOM (PIXEL TABS)                     */
+/* ========================================================= */
+.pixel-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #111;
+  border-top: var(--pixel) solid var(--carc-orange-dark);
+  display: flex;
+  justify-content: space-around;
+  padding: 12px;
+}
+
+.pixel-nav-button {
+  color: var(--carc-orange-light);
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pixel-nav-button:hover {
+  color: white;
+}
