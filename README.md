@@ -2,16 +2,6 @@
 
 A full-featured decentralized exchange (DEX) built on the Arc Network with automatic wallet connection, real token balances, and modern UI.
 
-## Default Token Addresses (Arc Network)
-
-The following tokens are pre-configured and available immediately after wallet connection:
-
-- **USDC**: `0x3600000000000000000000000000000000000000`
-- **WETH**: `0x3700000000000000000000000000000000000000`
-- **DAI**: `0x3800000000000000000000000000000000000000`
-
-These tokens are automatically loaded with your real balances when you connect your wallet.
-
 ## Key Features
 
 ### Multi-Wallet Support
@@ -443,3 +433,13 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Default Token Addresses (Arc Network)
+
+The following tokens are pre-configured and available immediately after wallet connection:
+
+- **USDC**: `0x3600000000000000000000000000000000000000`
+- **WETH**: `0x3700000000000000000000000000000000000000`
+- **DAI**: `0x3800000000000000000000000000000000000000`
+
+These tokens are automatically loaded with your real balances when you connect your wallet.
